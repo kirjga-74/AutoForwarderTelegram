@@ -8,12 +8,12 @@ client = TelegramClient('anon', api_id, api_hash)
 client.start()
 # CHAT_ID_A = -417043978 #chat ID SUMBER 
 # CHAT_ID_B = -599761503 #chat ID tujuan
-file_lists = "data.txt"
+file_lists = "datas.txt"
 myfiles = open(f"{cwd}/{file_lists}","r")
 list_accounts = myfiles.read()
 get_data = list_accounts.split("|")
-CHAT_ID_A = get_data[0]
-CHAT_ID_B = get_data[1]
+CHAT_ID_A = int(get_data[0])
+CHAT_ID_B = int(get_data[1])
 @client.on(events.NewMessage(chats=CHAT_ID_A))
 async def handle_new_message(event):
     await client.forward_messages(CHAT_ID_B, event.message)
