@@ -8,3 +8,13 @@ Auto Forward Telegram
       2. buka CMD, lalu ketik: pip install telethon
 
       3. run scriptnya
+      
+# File:
+
+      data.txt:
+      
+      format: chat_id_sumber|chat_id_target
+      
+      contoh:
+      
+      -1234567|-23456789
